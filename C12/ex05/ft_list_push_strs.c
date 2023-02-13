@@ -46,7 +46,44 @@ t_list *ft_list_last(t_list *begin)
     return (ft_list_last(begin->next));
 }
 
+void ft_list_push_back(t_list **begin, void *data)
+{
+    t_list *element = *begin;
 
+    if (element)
+    {
+        while (element->next)
+            element = element->next;
+        
+        element->next = ft_create_elem(data);
+    }
+    else
+    {
+        *begin = ft_create_elem(data);
+    }
+}
+
+t_list *ft_list_push_strs(int size, char **strs)
+{
+    int x = 0;
+    t_list *element;
+    t_list *tmp;
+
+    while (x < size)
+    {
+        
+        if (element) {
+            tmp = ft_create_elem(*(strs+x));
+            tmp->next = element;
+            element = tmp;
+        } else {
+            element = ft_create_elem(*(strs+x));
+        }
+        x++;
+    }
+
+    return element;
+}
 
 int main()
 {
@@ -54,10 +91,20 @@ int main()
     ft_list_push_front(&list, "Test2");
     ft_list_push_front(&list, "Test3");
 
-    printf("%d\n", ft_list_size(list));
 
+    ft_list_push_back(&list, "Issoufre");
+
+    ft_list_push_front(&list, "Kaka");
 
     t_list *last_elem = ft_list_last(list);
+
+    printf("%d\n", ft_list_size(list));
+
+    char *strs[] = {"Hello, world", "Lolilol"};
+
+    t_list *strs_list = ft_list_push_strs(2, strs);
+
+    printf("%s\n", (char *)strs_list->next->next->data);
 
     printf("%s\n", (char *)last_elem->data);
 }

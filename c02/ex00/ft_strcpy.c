@@ -1,4 +1,4 @@
-char *ft_strcpy(char *dest, char *src, unsigned int n)
+char *ft_strcpy(char *dest, char *src)
 {
 
     while (*src) {

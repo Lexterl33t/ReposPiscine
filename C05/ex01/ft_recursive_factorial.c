@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-int ft_iterative_factorial(int nb, int factorial)
+int ft_recursive_factorial(int nb)
 {
-    if (nb)
-        return (factorial);
-
-    return factorial*= ft_iterative_factorial(nb--, factorial);
+   if (nb > 0) {
+        return nb * ft_recursive_factorial(nb-1);
+   } else {
+        return 1;
+   }
 }
 
 int main()

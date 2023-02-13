@@ -35,6 +35,10 @@ int is_str_numeric(char c)
 
 int ft_atoi(char *str)
 {
+
+    if (str == NULL)
+        return (NULL);
+
     int minus = 0;
 
     int number = 0;

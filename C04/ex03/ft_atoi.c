@@ -74,7 +74,7 @@ int ft_atoi(char *str)
 
 
     printf("%d\n", minus);
-    if (minus && (minus % 2 == 1)) 
+    if (minus) 
         return number*-1;
 
     return (number);
@@ -82,7 +82,7 @@ int ft_atoi(char *str)
 
 int main()
 {
-    int d = ft_atoi("  --+++2147483647abc56");
+    int d = ft_atoi("  --++2147483647abc56");
 
     printf("%d\n", d);
 }

@@ -6,7 +6,7 @@ int ft_strlen(char *str) {
     while (*tmp)
         tmp++;
 
-    return (str-tmp);
+    return (tmp-str);
 }
 
 int ft_str_is_alpha(char *str)
@@ -26,7 +26,7 @@ int ft_str_is_alpha(char *str)
 
 int main()
 {
-    char *str = "helloworld";
+    char *str = "hello world";
 
     printf("%d", ft_str_is_alpha(str));
 }

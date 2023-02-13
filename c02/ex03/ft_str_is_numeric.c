@@ -6,7 +6,7 @@ int ft_strlen(char *str) {
     while (*tmp)
         tmp++;
 
-    return (str-tmp);
+    return (tmp-str);
 }
 
 int ft_str_is_numeric(char *str)
@@ -25,7 +25,7 @@ int ft_str_is_numeric(char *str)
 }
 int main()
 {
-    char *str = "00000a5";
+    char *str = "000005";
 
     printf("%d", ft_str_is_numeric(str));
 }

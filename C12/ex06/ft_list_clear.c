@@ -85,6 +85,23 @@ t_list *ft_list_push_strs(int size, char **strs)
     return element;
 }
 
+void free_fct(void * data)
+{
+    free(data);
+    data = NULL;
+}
+
+void ft_list_clear(t_list *begin, void (*free_fct)(void *)) 
+{
+    if (begin->next == NULL)
+        return;
+    
+    ft_list_clear(begin->next, free_fct);
+
+    free(begin);
+    //free_fct(begin->data); 
+}
+
 
 
 int main()
@@ -94,7 +111,7 @@ int main()
     ft_list_push_front(&list, "Test3");
     ft_list_push_back(&list, "Issoufre");
 
+    ft_list_clear(list, free_fct);
+    printf("%d\n", ft_list_size(list));
     printf("%s", (char *)ft_list_last(list)->data);
-
-    
 }

@@ -2,8 +2,6 @@
 
 int ft_str_is_alpha(char *str)
 {
-    if (!str)
-        return (1);
 
     if (str == 0) 
         return (1);
@@ -20,7 +18,7 @@ int ft_str_is_alpha(char *str)
 
 int main()
 {
-    char *str = "";
+    char *str = "dddd";
 
 
     printf("%d", ft_str_is_alpha(str));

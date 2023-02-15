@@ -2,8 +2,6 @@
 #
 int ft_str_is_printable(char *str)
 {
-    if (!str)
-        return (1);
 
     if (str == 0) 
         return (1);

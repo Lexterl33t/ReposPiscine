@@ -3,8 +3,6 @@
 
 int ft_is_lowercase(char *str)
 {
-    if (!str)
-        return (1);
     if (str == 0)
         return (1);
 

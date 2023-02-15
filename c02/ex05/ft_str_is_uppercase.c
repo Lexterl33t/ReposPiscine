@@ -1,11 +1,8 @@
 #include <stdio.h>
-#include <stddef.h>
 
 
 int ft_str_is_uppercase(char *str)
 {
-    if (!str)
-        return (1);
         
     if (str == 0)
         return (1);

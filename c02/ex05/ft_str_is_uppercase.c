@@ -5,7 +5,7 @@
 int ft_str_is_uppercase(char *str)
 {
     if (!str)
-        return (NULL);
+        return (1);
         
     if (str == 0)
         return (1);

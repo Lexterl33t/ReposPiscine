@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include <stddef.h>
 
 int ft_str_is_alpha(char *str)
 {
     if (!str)
-        return (NULL);
+        return (1);
 
     if (str == 0) 
         return (1);

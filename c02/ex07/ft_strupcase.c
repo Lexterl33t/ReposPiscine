@@ -23,7 +23,7 @@ char *ft_strupcase(char *str)
 
 int main()
 {
-    char str[] = "Hello world";
+    char *str = NULL;
 
     printf("%s", ft_strupcase(str));
 }

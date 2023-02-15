@@ -1,9 +1,11 @@
 #include <stdio.h>
-
+#include <stddef.h>
 
 
 int ft_is_lowercase(char *str)
 {
+    if (!str)
+        return (NULL);
     if (str == 0)
         return (1);
 

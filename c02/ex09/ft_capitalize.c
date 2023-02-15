@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stddef.h>
 
 
 
@@ -34,6 +34,9 @@ char *ft_strcapitalize(char *str)
     int i;
     i = 0;
     
+    if (!str)
+        return (NULL);
+        
     while (str[i]) {
         if (i == 0) {
             str[i] = to_uppercase(str[i]);

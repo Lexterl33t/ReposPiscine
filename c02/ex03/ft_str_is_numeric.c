@@ -1,8 +1,10 @@
 #include <stdio.h>
-
+#include <stddef.h>
 
 int ft_str_is_numeric(char *str)
 {
+    if (!str)
+        return (NULL);
     if (str == 0) 
         return (1);
 

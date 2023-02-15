@@ -1,6 +1,15 @@
+#include <stddef.h>
+#include <stdio.h>
+
 char *ft_strncpy(char *dest, char *src, unsigned int n)
 {
-    int i;
+    if (!dest && !src)
+      return (NULL);
+
+    if (!src) return (dest);
+
+    char *s = dest;
+    unsigned int i;
 
     i = 0;
 
@@ -14,5 +23,16 @@ char *ft_strncpy(char *dest, char *src, unsigned int n)
         i++;
     }
 
-    return (dest);
+    return (s);
+}
+
+int main()
+{
+    char *src = "Hello, world";
+
+    char dest[30];
+
+    ft_strncpy(dest, src, 5);
+
+    printf("%s\n", dest);
 }

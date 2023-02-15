@@ -1,8 +1,11 @@
 #include <stdio.h>
-
+#include <stddef.h>
 
 int ft_str_is_printable(char *str)
 {
+    if (!str)
+        return (NULL);
+        
     if (str == 0) 
         return (1);
 

@@ -5,7 +5,10 @@ int ft_strncmp(char *str, char *str2, unsigned int n)
 {
     char c;
     char x;
-
+    
+    if (!str || !str2)
+        return (0);
+    
     c = *str++;
     x = *str2++;
 

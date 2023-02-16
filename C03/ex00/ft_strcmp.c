@@ -2,15 +2,18 @@
 
 int ft_strcmp(char *str, char *str2)
 {
-    unsigned char c;
-    unsigned char x;
+    char c;
+    char x;
 
     /* It's checking if the string is empty, if it is, it returns the difference between the two
     strings. */
+    c = *str++;
+    x = *str2++;
+    
     while (c == x) 
     {
-        c = (unsigned char)*str++;  
-        x = (unsigned char)*str2++;
+        c = *str++;  
+        x = *str2++;
 
         /* It's checking if the string is empty, if it is, it returns the difference between the two
         strings. */

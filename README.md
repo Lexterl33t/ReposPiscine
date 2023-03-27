@@ -4,6 +4,6 @@
 
 Je suis un soldat à terre, mais je vais me relever.
 
-Pour preuve :
+Preuve à l'appuie :
 
 <center><img src="https://pbs.twimg.com/media/D2LQIAfX4AEAKbB.jpg" width="500"></center>
